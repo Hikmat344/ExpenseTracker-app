@@ -1,6 +1,7 @@
 
 import React , {useContext , useReducer} from 'react'
 import { createContext } from 'vm'
+import Reducer from './Reducer';
 
 
 const initialTransactions = [
@@ -14,3 +15,26 @@ const initialTransactions = [
 export const TransactionContext = createContext(initialTransactions);
 
 
+
+export const TransactionProvider = ({children})=>{
+  let [state ,dispatch] = useReducer(Reducer , initialTransactions)
+
+  function addTransaction(transObj){
+    dispatch({
+      type: "ADD",
+      payload: {
+        amount: transObj.amount,
+        desc: transObj.desc
+      },
+
+    })
+  }
+  return (
+    <TransactionContext.provider value={{
+      transactions: state,
+      addTransaction
+    }}>
+      {children}
+    </TransactionContext.provider>
+  )
+}
