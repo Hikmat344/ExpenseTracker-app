@@ -2,8 +2,8 @@
 import { Balance } from './Components/Balance';
 import { Summary } from './Components/Summary';
 import { History } from './Components/History';
-import { Addtransaction } from './Components/Addtransaction';
-import { GlobalProvider } from '@/context/GlobalState';
+import { Addtransaction } from './Components/Addtransaction'
+
 
 
 export default function Home() {

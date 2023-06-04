@@ -3,7 +3,7 @@ import { useContext } from "react"
 
 
 export const History = () => {
-    let transactions = useContext(TransactionContext);
+    let transactions = useContext(TransactionContext)
     
   return (
     <div>
