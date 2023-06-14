@@ -3,7 +3,7 @@
 export const Summary = () => {
   return (
     <div>
-        <div className='flex max-w-md w-full h-auto bg-slate-50  mt-4 space-x-15 shadow-sm shadow-slate-500'>
+        <div className='flex max-w-md w-full h-auto bg-slate-50  mt-4 space-x-15 shadow-sm shadow-slate-600'>
 
             <div className='justify-center mx-4 max-w-sm w-full mt-5 mb-5'>
                 <p className='font-bold text-lg'>INCOME</p>
